@@ -309,15 +309,54 @@ section h2 {
 }
 
 /* ============================================
-   ПОДВАЛ
+   ПОДВАЛ С QR-КОДОМ
    ============================================ */
 .footer {
-    text-align: center;
-    padding: 30px;
     background-color: #333;
     color: #fff;
     font-size: 14px;
     margin-top: 60px;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-info {
+    flex: 1;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.footer-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.qr-text {
+    font-size: 13px;
+    color: #b8860b;
+    text-align: center;
+}
+
+.qr-img {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    display: block;
 }
 
 /* ============================================
@@ -371,5 +410,14 @@ section h2 {
         top: 10px;
         right: 20px;
         font-size: 40px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-info {
+        text-align: center;
     }
 }
