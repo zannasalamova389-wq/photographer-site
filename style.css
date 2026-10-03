@@ -1,0 +1,375 @@
+/* ============================================
+   БАЗОВЫЕ СТИЛИ
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================================
+   ШАПКА
+   ============================================ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #b8860b;
+}
+
+/* ============================================
+   БАННЕР
+   ============================================ */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+.banner-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.banner-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.banner-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #b8860b;
+    transform: translateY(-2px);
+}
+
+.banner-img {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   СЕКЦИИ (общие)
+   ============================================ */
+section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ============================================
+   ОБО МНЕ
+   ============================================ */
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* ============================================
+   ПОРТФОЛИО
+   ============================================ */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ============================================
+   МОДАЛЬНОЕ ОКНО
+   ============================================ */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+    object-fit: contain;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #b8860b;
+}
+
+/* ============================================
+   УСЛУГИ
+   ============================================ */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.service-card .price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #b8860b;
+}
+
+/* ============================================
+   КОНТАКТЫ
+   ============================================ */
+.contacts p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contacts a {
+    color: #b8860b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contacts a:hover {
+    color: #8B6508;
+    text-decoration: underline;
+}
+
+/* ============================================
+   ПОДВАЛ
+   ============================================ */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+/* ============================================
+   АДАПТИВНОСТЬ
+   ============================================ */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    .nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav a {
+        font-size: 14px;
+    }
+    
+    .banner {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .banner-title {
+        font-size: 32px;
+    }
+    
+    .banner-img {
+        max-width: 100%;
+    }
+    
+    section {
+        padding: 50px 20px;
+    }
+    
+    section h2 {
+        font-size: 32px;
+    }
+    
+    .portfolio-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотограф Жанна — Портфолио</title>
+    
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <a href="#" class="logo">Жанна Фотограф</a>
+        <nav class="nav">
+            <a href="#about">Обо мне</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#services">Услуги</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <!-- БАННЕР -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1 class="banner-title">Ловлю моменты, которые остаются навсегда</h1>
+            <p class="banner-subtitle">Пейзажная и атмосферная фотография. Ловлю красоту в обычных моментах.</p>
+            <a href="#portfolio" class="btn">Смотреть портфолио</a>
+        </div>
+        <img src="images/banner.jpg" alt="Фотография" class="banner-img">
+    </section>
+
+    <!-- ОБО МНЕ -->
+    <section class="about" id="about">
+        <h2>Обо мне</h2>
+        <p>Меня зовут Жанна. Я фотограф-любитель. Снимаю закаты, природу, городские улицы и атмосферные моменты. Люблю ловить красоту в обычных вещах. Каждая фотография — это история.</p>
+    </section>
+
+    <!-- ПОРТФОЛИО -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="portfolio-title">Мои работы</h2>
+        <div class="portfolio-grid">
+
+            <div class="portfolio-item">
+                <img src="images/work1.jpg" alt="Закат">
+                <div class="portfolio-overlay"><h3>Закат</h3></div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="images/work2.jpg" alt="Лунная ночь">
+                <div class="portfolio-overlay"><h3>Лунная ночь</h3></div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="images/work3.jpg" alt="Сумерки">
+                <div class="portfolio-overlay"><h3>Сумерки</h3></div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="images/work4.jpg" alt="Утренний туман">
+                <div class="portfolio-overlay"><h3>Утренний туман</h3></div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="images/work5.jpg" alt="Красный закат">
+                <div class="portfolio-overlay"><h3>Красный закат</h3></div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="images/work6.jpg" alt="Городской день">
+                <div class="portfolio-overlay"><h3>Городской день</h3></div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="images/work7.jpg" alt="Зимние огни">
+                <div class="portfolio-overlay"><h3>Зимние огни</h3></div>
+            </div>
+
+        </div>
+
+        <!-- МОДАЛЬНОЕ ОКНО -->
+        <div class="modal" id="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-img" id="modal-img" src="" alt="">
+        </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section class="services" id="services">
+        <h2 class="services-title">Услуги и цены</h2>
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <h3>Пейзажная съёмка</h3>
+                <p>Прогулки, закаты, природа. 1 час, 30 обработанных фото.</p>
+                <p class="price">от 3 000 ₽</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Городская съёмка</h3>
+                <p>Улицы, архитектура, атмосферные кадры. 1 час, 30 фото.</p>
+                <p class="price">от 3 000 ₽</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Индивидуальная съёмка</h3>
+                <p>Портреты на природе или в городе. 1 час, 30 фото.</p>
+                <p class="price">от 5 000 ₽</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="contacts" id="contacts">
+        <h2>Контакты</h2>
+        <p>Telegram: <a href="https://t.me/" target="_blank">@ваш_ник</a></p>
+        <p>Email: <a href="mailto:info@example.ru">info@example.ru</a></p>
+        <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <p>© 2026 Жанна Фотограф. Все права защищены.</p>
+    </footer>
+
+    <!-- ПОДКЛЮЧЕНИЕ СКРИПТА -->
+    <script src="script.js"></script>
+</body>
+</html>
